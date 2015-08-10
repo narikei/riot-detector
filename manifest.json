@@ -1,0 +1,30 @@
+{
+  "manifest_version": 2,
+  "name": "riot-detector",
+  "short_name": "riot-detector",
+  "description": "Detects Riot.js apps as you browse.",
+  "author": "narita keisuke",
+  "version": "1.0",
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://*/*","https://*/*"],
+      "js": ["main.js"]
+    }
+  ],
+  "web_accessible_resources": ["detector.js"],
+  "page_action": {
+    "default_icon": {
+      "19": "images/icon19.png",
+      "38": "images/icon38.png"
+    }
+  },
+  "icons": {
+    "16": "images/icon16.png",
+    "48": "images/icon48.png",
+    "128": "images/icon128.png"
+  }
+}
